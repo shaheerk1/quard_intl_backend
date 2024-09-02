@@ -7,7 +7,7 @@
 - ✅ Responsive UI to match the provided design
 - ✅ Backend with Migration Files, Seeders, Models, and Controllers
 - ✅ Proper API endpoints with \`POST\`, \`PUT\`, \`DELETE\`, \`GET\` requests
-- ✅ Error codes, validations, and protected routes for CRUD operations
+- ✅ Error codes, validations, and protected routes for CRUD operations (goto /products to view the manage products page)
 - ✅ Unit tests for Autthentication Logic
 - ✅ Sanctum for token-based authentication and password hashing
 - ✅ Complete CRUD operations implemented in both frontend and backend
