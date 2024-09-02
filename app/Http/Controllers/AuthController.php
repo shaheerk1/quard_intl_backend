@@ -37,16 +37,6 @@ class AuthController extends Controller
     public function getUser(){
         $user = auth()->user();
 
-        $user->load('userDetail');
-        return response()->json([
-            'user' => [
-                'id' => $user->id,
-                'name' => $user->name,
-                'email' => $user->email,
-                'email_verified_at' => $user->email_verified_at,
-                'created_at' => $user->created_at,
-                'updated_at' => $user->updated_at,
-            ],
-        ]);
+        return response()->json(['user' => $user]);
     }
 }

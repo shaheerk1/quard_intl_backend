@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProductsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,9 +19,13 @@ use Illuminate\Support\Facades\Route;
 Route::post('login',  [AuthController::class, 'login']);
 
 Route::group(['middleware' => 'auth:sanctum'], function(){
-    Route::get('/getUser', [AuthController::class, 'getUser']);   
-    Route::get('/logout', [AuthController::class, 'logout']);  
-    
+    Route::get('/getUser', [AuthController::class, 'getUser']);
+    Route::get('/logout', [AuthController::class, 'logout']);
+
+    Route::get('/products', [ProductsController::class, 'index']);
+    Route::post('/products', [ProductsController::class, 'store']);
+    Route::put('/products/{id}', [ProductsController::class, 'update']);
+    Route::delete('/products/{id}', [ProductsController::class, 'destroy']);
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
