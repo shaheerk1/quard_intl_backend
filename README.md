@@ -57,6 +57,8 @@
    php artisan key:generate
    ```
 6. **Run migrations and seed the database:** creates the tables and create an initial user
+credentials - email: test@mail.lk and password: 1234test
+
    ```
    php artisan migrate --seed
    ```
